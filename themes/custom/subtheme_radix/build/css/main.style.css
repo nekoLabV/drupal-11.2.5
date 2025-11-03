@@ -246,8 +246,17 @@ h2, .h2 {
   color: inherit;
 }
 
-.navbar {
+.page__header {
   border-bottom: 1px solid #E5E5E5;
+}
+
+.region--header .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.region--header .block--system-branding {
+  margin-left: auto;
 }
 
 /**
@@ -497,8 +506,17 @@ h2, .h2 {
   color: inherit;
 }
 
-.navbar {
+.page__header {
   border-bottom: 1px solid #E5E5E5;
+}
+
+.region--header .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.region--header .block--system-branding {
+  margin-left: auto;
 }
 
 :root,

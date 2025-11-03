@@ -10,12 +10,15 @@ starterkit: true
 'interface translation project': subtheme_radix
 'interface translation server pattern': themes/custom/subtheme_radix/translations/%language.po
 regions:
-  navbar_left: 'Navbar left'
-  navbar_center: 'Navbar center'
-  navbar_right: 'Navbar right'
+  # navbar_left: 'Navbar left'
+  # navbar_center: 'Navbar center'
+  # navbar_right: 'Navbar right'
   header: Header
+  banner: Banner
+  highlighted: 'Highlighted'
+  content_before: 'Content Before'
   content: Content
-  page_bottom: 'Page bottom'
+  content_after: 'Content After'
   footer: Footer
 libraries:
   - subtheme_radix/style
