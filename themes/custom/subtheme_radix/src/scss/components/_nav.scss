@@ -1,0 +1,24 @@
+@use '@scss/base/variables' as var;
+
+.nav {
+  &-item {
+    padding: 0;
+    &:hover {
+      border-radius: 8px;
+      background-color: rgba($color: var.$black, $alpha: 0.15);
+    }
+  }
+  &-link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: var.$black;
+    &.active {
+      color: var.$black;
+    }
+  }
+}
+.nav.navbar-nav .nav-item .nav-link {
+  padding: 24px 20px;
+}

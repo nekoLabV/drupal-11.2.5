@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Theme override to display the navbar-left region.
+ */
+#}
+{% set attributes = attributes.addClass(['region', 'region--navbar-left', 'd-flex align-items-center']) %}
+
+<div{{ attributes }}>
+  {{ content }}
+</div>

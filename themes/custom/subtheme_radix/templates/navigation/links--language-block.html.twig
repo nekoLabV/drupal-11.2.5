@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Language switcher dropdown template.
+ */
+#}
+{% if links %}
+<div class="dropdown language-switcher-dropdown">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    {{ current_language }}
+  </button>
+  <ul class="dropdown-menu" data-component-id="subtheme_radix:nav">
+    {% for key, link in links %}
+      {% if link.link %}
+        <li class="dropdown-item{% if link.is_active %} active{% endif %}">
+          <a href="{{ link.link['#url'].toString() }}" class="language-link{% if link.is_active %} is-active{% endif %}" hreflang="{{ link.langcode }}">
+            {{ link.language_name }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

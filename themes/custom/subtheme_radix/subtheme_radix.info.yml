@@ -1,0 +1,38 @@
+name: subtheme_radix
+description: "subtheme_radix theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
+screenshot: screenshot.png
+'alt text': 'subtheme_radix theme screenshot'
+core_version_requirement: ^11
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+'interface translation project': subtheme_radix
+'interface translation server pattern': themes/custom/subtheme_radix/translations/%language.po
+regions:
+  navbar_left: 'Navbar left'
+  navbar_center: 'Navbar center'
+  navbar_right: 'Navbar right'
+  header: Header
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - subtheme_radix/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-extend:
+  core/drupal.ajax:
+    - subtheme_radix/drupal.ajax
+  core/drupal.checkbox:
+    - subtheme_radix/drupal.checkbox
+  core/drupal.message:
+    - subtheme_radix/drupal.message
+  core/drupal.progress:
+    - subtheme_radix/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - subtheme_radix/jquery.validate
+version: 6.0.2
+project: radix
+datestamp: 1746711574
+generator: 'radix_starterkit:6.0.2'

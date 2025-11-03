@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Theme functions.
+ */
+
+// Include all files from the includes directory.
+$includes_path = __DIR__ . '/includes/*.theme';
+foreach (glob($includes_path) as $file) {
+  require_once __DIR__ . '/includes/' . basename($file);
+}
+
+function subtheme_radix_preprocess_links__language_block(&$variables) {
+  $language_manager = \Drupal::languageManager();
+  $current_language = $language_manager->getCurrentLanguage();
+  
+  // 获取所有可用的语言
+  $languages = $language_manager->getLanguages();
+  $current_langcode = $current_language->getId();
+  
+  // 设置当前语言名称
+  $variables['current_language'] = $languages[$current_langcode]->getName();
+  
+  // 处理链接数据
+  if (isset($variables['links'])) {
+    foreach ($variables['links'] as $key => &$link) {
+      // 确保链接有标题
+      if (isset($link['link']['#title'])) {
+        $langcode = $link['link']['#options']['language']->getId();
+        $link['language_name'] = $languages[$langcode]->getName();
+        $link['is_active'] = ($langcode == $current_langcode);
+        $link['langcode'] = $langcode;
+      }
+    }
+  }
+}

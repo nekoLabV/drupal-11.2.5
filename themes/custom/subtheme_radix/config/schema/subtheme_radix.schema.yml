@@ -1,0 +1,5 @@
+# Schema for the configuration files of the subtheme_radix theme.
+
+subtheme_radix.settings:
+  type: theme_settings
+  label: 'subtheme_radix settings'

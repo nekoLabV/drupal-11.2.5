@@ -1,0 +1,10 @@
+.dropdown-item {
+  &.active {
+    color: inherit;
+    font-weight: bold;
+    background-color: initial;
+  }
+  .language-link {
+    color: inherit;
+  }
+}
