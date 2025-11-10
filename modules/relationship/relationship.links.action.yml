@@ -1,0 +1,11 @@
+relationship.type_add:
+  title: 'Add relationship type'
+  route_name: entity.relationship_type.add_form
+  appears_on:
+    - entity.relationship_type.collection
+
+relationship.add_page:
+  title: 'Add relationship'
+  route_name: entity.relationship.add_page
+  appears_on:
+    - entity.relationship.collection

@@ -1,0 +1,4 @@
+administer relationship types:
+  title: 'Administer relationship types'
+  description: 'Maintain the types of relationship entity.'
+  restrict access: true

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - relationship
+id: relationship_save_action
+label: 'Save relationships'
+type: relationship
+plugin: entity:save_action:relationship
+configuration: {  }

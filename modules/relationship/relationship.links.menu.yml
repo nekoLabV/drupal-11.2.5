@@ -1,0 +1,11 @@
+entity.relationship_type.collection:
+  title: 'Relationship types'
+  description: 'Manage and CRUD actions on Relationship type.'
+  parent: system.admin_structure
+  route_name: entity.relationship_type.collection
+
+entity.relationship.collection:
+  title: 'Relationships'
+  description: 'List of relationships.'
+  route_name: entity.relationship.collection
+  parent: system.admin_content
